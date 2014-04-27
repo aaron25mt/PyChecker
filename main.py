@@ -35,8 +35,8 @@ def main(detailsList):
 	printDetails(good, bad)
 
 def printDetails(good, bad):
-	print(len(good) + len(bad))
-	print((len(good) / (len(good) + len(bad))) * 100)
+	#print(len(good) + len(bad))
+	#print((len(good) / (len(good) + len(bad))) * 100)
 	print('Out of ' + str(len(good) + len(bad)) + ' accounts, ' + str((len(good) / (len(good) + len(bad))) * 100) + '% of them worked! These accounts follow:\n')
 	for account in good:
 		print(account)
