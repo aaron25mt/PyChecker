@@ -41,6 +41,7 @@ def printDetails(good, bad):
 		print(account)
 	seeBad = raw_input('\nDo you want to see the bad accounts? ')
 	if(seeBad.lower() == 'yes' or seeBad.lower() == 'y'):
+		print('\n')
 		for account in bad:
 			print(account)
 
