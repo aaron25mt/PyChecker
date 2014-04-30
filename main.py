@@ -36,14 +36,16 @@ def main(detailsList):
 	printDetails(good, bad)
 
 def printDetails(good, bad):
-	print('Out of ' + str(len(good) + len(bad)) + ' accounts, ' + str(len(good)) + ' of them worked! These accounts follow:\n')
+	anyGood = 'These accounts follow:\n' if len(good) > 0 else ''
+	print('Out of ' + str(len(good) + len(bad)) + ' accounts, ' + str(len(good)) + ' of them worked! ' + anyGood)
 	for account in good:
 		print(account)
-	seeBad = raw_input('\nDo you want to see the bad accounts? ')
-	if(seeBad.lower() == 'yes' or seeBad.lower() == 'y'):
-		print('\n')
-		for account in bad:
-			print(account)
+	if(len(anyGood) > 1 and len(bad) > 0):
+		seeBad = raw_input('\nDo you want to see the bad accounts? ')
+		if(seeBad.lower() == 'yes' or seeBad.lower() == 'y'):
+			print('')
+			for account in bad:
+				print(account)
 
 if __name__ == '__main__':
 	setup()
