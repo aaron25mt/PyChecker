@@ -40,7 +40,7 @@ def printDetails(good, bad):
 	print('Out of ' + str(len(good) + len(bad)) + ' accounts, ' + str(len(good)) + ' of them worked! ' + anyGood)
 	for account in good:
 		print(account)
-	if(len(anyGood) > 1 and len(bad) > 0):
+	if(len(bad) > 0):
 		seeBad = raw_input('\nDo you want to see the bad accounts? ')
 		if(seeBad.lower() == 'yes' or seeBad.lower() == 'y'):
 			print('')
